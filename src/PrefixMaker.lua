@@ -39,7 +39,7 @@ function Main()
     if prefix == nil then
         Confirm("Error", "Prefix cannot be empty.")
     end
-    prefix = prefix .. " - "
+    prefix = prefix
 
     Printf(result)
     Printf(prefix)
@@ -54,7 +54,7 @@ function Main()
        local objectName = object:Get("Name")
 
         if not objectName:startsWith(prefix) then
-            object:Set("Name", prefix .. objectName)
+            object:Set("Name", prefix .. " - " .. objectName)
         end
     end
 end
